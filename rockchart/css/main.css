@@ -1,0 +1,392 @@
+body {
+    background-color: #f2f2f2;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Raleway;
+    font-weight: 300;
+    color: #333;
+}
+
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.goright {
+    text-align: right;
+}
+
+.mt {
+    padding-top: 25px;
+    text-align: center;
+}
+
+a {
+    color: #16a085;
+    word-wrap: break-word;
+    -webkit-transition: color .1s ease-in, background .1s ease-in;
+    -moz-transition: color .1s ease-in, background .1s ease-in;
+    -ms-transition: color .1s ease-in, background .1s ease-in;
+    -o-transition: color .1s ease-in, background .1s ease-in;
+    transition: color .1s ease-in, background .1s ease-in;
+}
+
+a:hover, a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before, a:after {
+    -webkit-transition: color .1s ease-in, background .1s ease-in;
+    -moz-transition: color .1s ease-in, background .1s ease-in;
+    -ms-transition: color .1s ease-in, background .1s ease-in;
+    -o-transition: color .1s ease-in, background .1s ease-in;
+    transition: color .1s ease-in, background .1s ease-in;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.tm {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.menu {
+    position: fixed;
+    right: -200px;
+    width: 260px;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    text-align: left;
+}
+
+.menu.menu-open {
+    right: 0;
+}
+
+.menu-wrap {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    background: #1a1a1a;
+    width: 200px;
+    height: 100%;
+}
+
+.menu h1.logo a {
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .15em;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.menu h1.logo a:hover {
+    color: #1abc9c;
+}
+
+.menu img.logo {
+    margin: 20px 0;
+    max-width: 160px;
+}
+
+.menu a {
+    margin-left: 20px;
+    color: gray;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+.menu a:active {
+    color: #fff;
+}
+
+.menu a>i {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    width: 25px;
+    font-size: 14px;
+    line-height: 40px;
+    margin: 25px 2px;
+}
+
+.menu-close {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    font-size: 14px;
+    color: gray;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    top: 20px;
+    right: 5px;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+.menu-close:hover {
+    color: #fff;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+.body-push {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+}
+
+.body-push-toright {
+    left: 200px;
+}
+
+.body-push-toleft {
+    left: -200px;
+}
+
+.menu, .body-push {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#menuToggle {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 11;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, .40);
+    border-radius: 20px;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+#menuToggle:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, .2);
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+#headerwrap {
+    background: url(../img/header-bg1.jpg) no-repeat center top;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+    margin-top: 9vh;
+    color: black;
+    font-size: 8vw;
+    font-weight: 700;
+    letter-spacing: 3px;
+    -webkit-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+    -moz-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+    -o-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+}
+
+#headerwrap h2 {
+    color: black;
+    font-size: 3vw;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-top: -2vh;
+    -webkit-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+    -moz-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+    -o-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+}
+
+#headerwrap i {
+    font-size: 40px;
+    color: black;
+}
+
+#services {
+    background: #1abc9c;
+    margin-top: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+#services h3 {
+    color: #fff;
+}
+
+#services p {
+    color: #fff;
+}
+
+#services i {
+    color: #fff;
+    font-size: 35px;
+    margin-top: 22px;
+}
+
+#call {
+    background: #2f2f2f;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+#call h3 {
+    color: #fff;
+}
+
+#call p {
+    color: #fff;
+}
+
+#portfolio{
+    text-align: center;
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+
+    #headerwrap h1 {
+        margin-top: 12vh;
+        color: black;
+        font-size: 15vw;
+        font-weight: 700;
+        letter-spacing: 3px;
+        -webkit-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+        -moz-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+        -o-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+        text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+    }
+    #headerwrap h2 {
+        color: black;
+        font-size: 6vw;
+        font-weight: 100;
+        letter-spacing: 2px;
+        margin-top: -2vh;
+        -webkit-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+        -moz-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+        -o-text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+        text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+
+    }
+
+}
+
+
+/* The Close Button */
+.glyphicon {
+    color: #1ABC9C;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.glyphicon:hover,
+.glyphicon:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.mod{
+    padding: 5px;
+}
+
+.photo{
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.closed{
+
+    padding-top: 25px;
+}
+
+#button-comm{
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.com h2{
+    color: #fff;
+}
+
+#close{
+    border: none;
+    background-color: #F2F2F2;
+}
+
+#close:focus{
+    outline:0;
+    background-color: #F2F2F2;
+}
